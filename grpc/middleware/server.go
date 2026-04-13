@@ -5,9 +5,9 @@ import (
 
 	"github.com/cockroachdb/errors"
 	"github.com/cockroachdb/errors/extgrpc"
-	"github.com/gogo/status"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/status"
 )
 
 func UnaryServerInterceptor(
@@ -34,9 +34,8 @@ func UnaryServerInterceptor(
 			// here, so better panic so we can figure
 			// out why than have this silently passing."
 			//
-			// More specifically, an error here is from ptypes.MarshalAny(detail), which probably
-			// means that your proto.Message is not registered with gogoproto.  (Make sure that
-			// your error's .pb.go file imports "github.com/gogo/protobuf/proto".)
+			// More specifically, an error here means the status detail could not be
+			// marshaled as a standard protobuf message.
 			//
 			// By panicking, we either take down the service or (if it has a recovery middleware) cause
 			// the call to fail dramatically.  Either case will draw attention to get it fixed.

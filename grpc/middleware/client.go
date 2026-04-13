@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"github.com/cockroachdb/errors"
-	"github.com/gogo/status"
 
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/status"
 )
 
 func UnaryClientInterceptor(

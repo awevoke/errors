@@ -25,8 +25,8 @@ import (
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/errbase/internal"
 	"github.com/cockroachdb/errors/testutils"
-	"github.com/gogo/protobuf/proto"
 	"github.com/kr/pretty"
+	"google.golang.org/protobuf/proto"
 )
 
 // These tests demonstrate how the library makes a best effort at

@@ -21,8 +21,9 @@ import (
 	"strings"
 
 	"github.com/cockroachdb/errors/errorspb"
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/types"
+	"github.com/cockroachdb/errors/internal/protowire"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/types/known/anypb"
 )
 
 // EncodedError is the type of an encoded (and protobuf-encodable) error.
@@ -43,7 +44,7 @@ func EncodeError(ctx context.Context, err error) EncodedError {
 // required single `cause` field.
 func encodeLeaf(ctx context.Context, err error, causes []error) EncodedError {
 	var msg string
-	var details errorspb.EncodedErrorDetails
+	var details *errorspb.EncodedErrorDetails
 
 	if e, ok := err.(*opaqueLeaf); ok {
 		msg = e.msg
@@ -52,12 +53,13 @@ func encodeLeaf(ctx context.Context, err error, causes []error) EncodedError {
 		msg = e.msg
 		details = e.details
 	} else {
-		details.OriginalTypeName, details.ErrorTypeMark.FamilyName, details.ErrorTypeMark.Extension = getTypeDetails(err, false /*onlyFamily*/)
+		origTypeName, familyName, extension := getTypeDetails(err, false /*onlyFamily*/)
+		details = makeEncodedErrorDetails(origTypeName, familyName, extension)
 
 		var payload proto.Message
 
 		// If we have a manually registered encoder, use that.
-		typeKey := TypeKey(details.ErrorTypeMark.FamilyName)
+		typeKey := TypeKey(details.GetErrorTypeMark().GetFamilyName())
 		if enc, ok := leafEncoders[typeKey]; ok {
 			msg, details.ReportablePayload, payload = enc(ctx, err)
 		} else {
@@ -111,12 +113,12 @@ func SetWarningFn(fn func(context.Context, string, ...interface{})) {
 	warningFn = fn
 }
 
-func encodeAsAny(ctx context.Context, err error, payload proto.Message) *types.Any {
+func encodeAsAny(ctx context.Context, err error, payload proto.Message) *anypb.Any {
 	if payload == nil {
 		return nil
 	}
 
-	any, marshalErr := types.MarshalAny(payload)
+	any, marshalErr := protowire.MarshalAny(payload)
 	if marshalErr != nil {
 		warningFn(ctx,
 			"error %+v (%T) announces proto message, but marshaling fails: %+v",
@@ -130,7 +132,7 @@ func encodeAsAny(ctx context.Context, err error, payload proto.Message) *types.A
 // encodeWrapper encodes an error wrapper.
 func encodeWrapper(ctx context.Context, err, cause error) EncodedError {
 	var msg string
-	var details errorspb.EncodedErrorDetails
+	var details *errorspb.EncodedErrorDetails
 	messageType := Prefix
 
 	if e, ok := err.(*opaqueWrapper); ok {
@@ -144,12 +146,13 @@ func encodeWrapper(ctx context.Context, err, cause error) EncodedError {
 		details = e.details
 		messageType = e.messageType
 	} else {
-		details.OriginalTypeName, details.ErrorTypeMark.FamilyName, details.ErrorTypeMark.Extension = getTypeDetails(err, false /*onlyFamily*/)
+		origTypeName, familyName, extension := getTypeDetails(err, false /*onlyFamily*/)
+		details = makeEncodedErrorDetails(origTypeName, familyName, extension)
 
 		var payload proto.Message
 
 		// If we have a manually registered encoder, use that.
-		typeKey := TypeKey(details.ErrorTypeMark.FamilyName)
+		typeKey := TypeKey(details.GetErrorTypeMark().GetFamilyName())
 		if enc, ok := encoders[typeKey]; ok {
 			msg, details.ReportablePayload, payload, messageType = enc(ctx, err)
 		} else {
@@ -172,11 +175,26 @@ func encodeWrapper(ctx context.Context, err, cause error) EncodedError {
 	return EncodedError{
 		Error: &errorspb.EncodedError_Wrapper{
 			Wrapper: &errorspb.EncodedWrapper{
-				Cause:       EncodeError(ctx, cause),
+				Cause:       encodeErrorPtr(ctx, cause),
 				Message:     msg,
 				Details:     details,
 				MessageType: errorspb.MessageType(messageType),
 			},
+		},
+	}
+}
+
+func encodeErrorPtr(ctx context.Context, err error) *EncodedError {
+	enc := EncodeError(ctx, err)
+	return &enc
+}
+
+func makeEncodedErrorDetails(origTypeName, familyName, extension string) *errorspb.EncodedErrorDetails {
+	return &errorspb.EncodedErrorDetails{
+		OriginalTypeName: origTypeName,
+		ErrorTypeMark: &errorspb.ErrorTypeMark{
+			FamilyName: familyName,
+			Extension:  extension,
 		},
 	}
 }
@@ -222,11 +240,11 @@ func getTypeDetails(
 	// we still know its type name. Return that.
 	switch t := err.(type) {
 	case *opaqueLeaf:
-		return t.details.OriginalTypeName, t.details.ErrorTypeMark.FamilyName, t.details.ErrorTypeMark.Extension
+		return t.details.GetOriginalTypeName(), t.details.GetErrorTypeMark().GetFamilyName(), t.details.GetErrorTypeMark().GetExtension()
 	case *opaqueLeafCauses:
-		return t.details.OriginalTypeName, t.details.ErrorTypeMark.FamilyName, t.details.ErrorTypeMark.Extension
+		return t.details.GetOriginalTypeName(), t.details.GetErrorTypeMark().GetFamilyName(), t.details.GetErrorTypeMark().GetExtension()
 	case *opaqueWrapper:
-		return t.details.OriginalTypeName, t.details.ErrorTypeMark.FamilyName, t.details.ErrorTypeMark.Extension
+		return t.details.GetOriginalTypeName(), t.details.GetErrorTypeMark().GetFamilyName(), t.details.GetErrorTypeMark().GetExtension()
 	}
 
 	// Compute the full error name, for reporting and printing details.

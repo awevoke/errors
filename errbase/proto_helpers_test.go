@@ -21,9 +21,9 @@ import (
 
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/errorspb"
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/types"
 	"github.com/stretchr/testify/require"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/types/known/anypb"
 )
 
 type protoRoundTripError struct {
@@ -71,12 +71,12 @@ func makeUnknownEncodedError(typeURL, typeName, msg string) errbase.EncodedError
 		Error: &errorspb.EncodedError_Leaf{
 			Leaf: &errorspb.EncodedErrorLeaf{
 				Message: msg,
-				Details: errorspb.EncodedErrorDetails{
+				Details: &errorspb.EncodedErrorDetails{
 					OriginalTypeName: typeName,
-					ErrorTypeMark: errorspb.ErrorTypeMark{
+					ErrorTypeMark: &errorspb.ErrorTypeMark{
 						FamilyName: typeName,
 					},
-					FullDetails: &types.Any{
+					FullDetails: &anypb.Any{
 						TypeUrl: typeURL,
 						Value:   []byte{0xde, 0xad, 0xbe, 0xef},
 					},

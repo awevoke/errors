@@ -21,9 +21,13 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/errors/errbase"
+	"github.com/cockroachdb/errors/errorspb"
+	"github.com/cockroachdb/errors/internal/protowire"
 	"github.com/cockroachdb/errors/testutils"
-	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/reflect/protoreflect"
+	"google.golang.org/protobuf/reflect/protoregistry"
 )
 
 type myE struct{ marker string }
@@ -58,7 +62,7 @@ func TestEncodeErrorProtoRoundTrip(t *testing.T) {
 
 	leaf := enc.GetLeaf()
 	require.NotNil(t, leaf)
-	require.NotNil(t, leaf.Details.FullDetails)
+	require.NotNil(t, leaf.GetDetails().GetFullDetails())
 
 	decoded := roundTripEncodedErrorProto(t, enc)
 	require.True(t, proto.Equal(&enc, &decoded))
@@ -92,7 +96,7 @@ func TestFullDetailsCurrentRegistryPath(t *testing.T) {
 
 	wrapper := enc.GetWrapper()
 	require.NotNil(t, wrapper)
-	require.NotNil(t, wrapper.Details.FullDetails)
+	require.NotNil(t, wrapper.GetDetails().GetFullDetails())
 
 	decoded := roundTripEncodedErrorProto(t, enc)
 	require.True(t, proto.Equal(&enc, &decoded))
@@ -105,4 +109,54 @@ func TestFullDetailsCurrentRegistryPath(t *testing.T) {
 	require.Equal(t, err.Op, decodedPath.Op)
 	require.Equal(t, err.Path, decodedPath.Path)
 	require.Equal(t, err.Err.Error(), decodedPath.Err.Error())
+}
+
+type singleMessageResolver struct {
+	url string
+	mt  protoreflect.MessageType
+}
+
+func (r singleMessageResolver) FindMessageByName(protoreflect.FullName) (protoreflect.MessageType, error) {
+	return nil, protoregistry.NotFound
+}
+
+func (r singleMessageResolver) FindMessageByURL(url string) (protoreflect.MessageType, error) {
+	if url == r.url {
+		return r.mt, nil
+	}
+	return nil, protoregistry.NotFound
+}
+
+func TestDecodeErrorWithOptionsUsesResolver(t *testing.T) {
+	typeKey := errbase.GetTypeKey((*protoRoundTripError)(nil))
+	errbase.RegisterLeafDecoder(typeKey, func(_ context.Context, _ string, _ []string, payload proto.Message) error {
+		m, ok := payload.(*errorspb.StringsPayload)
+		if !ok || len(m.Details) == 0 {
+			return nil
+		}
+		return &protoRoundTripError{value: m.Details[0]}
+	})
+	t.Cleanup(func() {
+		errbase.RegisterLeafDecoder(typeKey, nil)
+	})
+
+	payload := &errorspb.StringsPayload{Details: []string{"custom"}}
+	fullDetails, err := protowire.MarshalAny(payload)
+	require.NoError(t, err)
+	fullDetails.TypeUrl = "type.googleapis.com/errbase_test.AliasStringsPayload"
+
+	enc := makeUnknownEncodedError(
+		fullDetails.TypeUrl,
+		string(typeKey),
+		"proto round trip: custom",
+	)
+	enc.GetLeaf().GetDetails().FullDetails = fullDetails
+
+	decoded := errbase.DecodeErrorWithOptions(context.Background(), enc, errbase.DecodeOptions{
+		Resolver: singleMessageResolver{
+			url: fullDetails.TypeUrl,
+			mt:  payload.ProtoReflect().Type(),
+		},
+	})
+	require.Equal(t, &protoRoundTripError{value: "custom"}, decoded)
 }

@@ -12,21 +12,22 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
+//go:build !plan9
 // +build !plan9
 
 package errbase_test
 
 import (
 	"context"
+	"os"
 	"reflect"
 	"syscall"
 	"testing"
 
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/errorspb"
-	"github.com/cockroachdb/errors/oserror"
+	"github.com/cockroachdb/errors/internal/protowire"
 	"github.com/cockroachdb/errors/testutils"
-	"github.com/gogo/protobuf/types"
 )
 
 func TestAdaptErrno(t *testing.T) {
@@ -46,14 +47,14 @@ func TestAdaptErrno(t *testing.T) {
 		enc := errbase.EncodeError(context.Background(), origErr)
 
 		// Trick the decoder into thinking the error comes from a different platform.
-		details := &enc.Error.(*errorspb.EncodedError_Leaf).Leaf.Details
-		var d types.DynamicAny
-		if err := types.UnmarshalAny(details.FullDetails, &d); err != nil {
+		details := enc.GetLeaf().GetDetails()
+		payload, err := protowire.UnmarshalAny(details.GetFullDetails(), nil)
+		if err != nil {
 			t.Fatal(err)
 		}
-		errnoDetails := d.Message.(*errorspb.ErrnoPayload)
+		errnoDetails := payload.(*errorspb.ErrnoPayload)
 		errnoDetails.Arch = "OTHER"
-		any, err := types.MarshalAny(errnoDetails)
+		any, err := protowire.MarshalAny(errnoDetails)
 		if err != nil {
 			t.Fatal(err)
 		}
@@ -66,9 +67,10 @@ func TestAdaptErrno(t *testing.T) {
 		}
 
 		// Now check that the properties have been preserved properly.
-		tt.CheckEqual(oserror.IsPermission(origErr), oserror.IsPermission(dec))
-		tt.CheckEqual(oserror.IsExist(origErr), oserror.IsExist(dec))
-		tt.CheckEqual(oserror.IsNotExist(origErr), oserror.IsNotExist(dec))
-		tt.CheckEqual(oserror.IsTimeout(origErr), oserror.IsTimeout(dec))
+		opaqueErrno := dec.(*errbase.OpaqueErrno)
+		tt.CheckEqual(origErr.Is(os.ErrPermission), opaqueErrno.Is(os.ErrPermission))
+		tt.CheckEqual(origErr.Is(os.ErrExist), opaqueErrno.Is(os.ErrExist))
+		tt.CheckEqual(origErr.Is(os.ErrNotExist), opaqueErrno.Is(os.ErrNotExist))
+		tt.CheckEqual(origErr.Timeout(), opaqueErrno.Timeout())
 	}
 }

@@ -18,51 +18,64 @@ import (
 	"context"
 
 	"github.com/cockroachdb/errors/errorspb"
-	"github.com/gogo/protobuf/proto"
-	"github.com/gogo/protobuf/types"
+	"github.com/cockroachdb/errors/internal/protowire"
+	"google.golang.org/protobuf/proto"
+	"google.golang.org/protobuf/reflect/protoregistry"
 )
 
 // DecodeError decodes an error.
 //
 // Can only be called if the EncodedError is set (see IsSet()).
 func DecodeError(ctx context.Context, enc EncodedError) error {
-	if w := enc.GetWrapper(); w != nil {
-		return decodeWrapper(ctx, w)
-	}
-	return decodeLeaf(ctx, enc.GetLeaf())
+	return DecodeErrorWithOptions(ctx, enc, DecodeOptions{Resolver: protoregistry.GlobalTypes})
 }
 
-func decodeLeaf(ctx context.Context, enc *errorspb.EncodedErrorLeaf) error {
+// DecodeOptions configures DecodeErrorWithOptions.
+type DecodeOptions struct {
+	Resolver protoregistry.MessageTypeResolver
+}
+
+// DecodeErrorWithOptions decodes an error with explicit protobuf options.
+//
+// Can only be called if the EncodedError is set (see IsSet()).
+func DecodeErrorWithOptions(ctx context.Context, enc EncodedError, opts DecodeOptions) error {
+	if opts.Resolver == nil {
+		opts.Resolver = protoregistry.GlobalTypes
+	}
+	if w := enc.GetWrapper(); w != nil {
+		return decodeWrapper(ctx, w, opts)
+	}
+	return decodeLeaf(ctx, enc.GetLeaf(), opts)
+}
+
+func decodeLeaf(ctx context.Context, enc *errorspb.EncodedErrorLeaf, opts DecodeOptions) error {
+	details := enc.GetDetails()
+
 	// In case there is a detailed payload, decode it.
 	var payload proto.Message
-	if enc.Details.FullDetails != nil {
-		var d types.DynamicAny
-		err := types.UnmarshalAny(enc.Details.FullDetails, &d)
+	if details.GetFullDetails() != nil {
+		var err error
+		payload, err = protowire.UnmarshalAny(details.GetFullDetails(), opts.Resolver)
 		if err != nil {
 			// It's OK if we can't decode. We'll use
 			// the opaque type below.
 			warningFn(ctx, "error while unmarshalling error: %+v", err)
-		} else {
-			payload = d.Message
 		}
 	}
 
 	// Do we have a leaf decoder for this type?
-	typeKey := TypeKey(enc.Details.ErrorTypeMark.FamilyName)
+	typeKey := TypeKey(details.GetErrorTypeMark().GetFamilyName())
 	if decoder, ok := leafDecoders[typeKey]; ok {
 		// Yes, use it.
-		genErr := decoder(ctx, enc.Message, enc.Details.ReportablePayload, payload)
+		genErr := decoder(ctx, enc.GetMessage(), details.GetReportablePayload(), payload)
 		if genErr != nil {
 			// Decoding succeeded. Use this.
 			return genErr
 		}
 		// Decoding failed, we'll drop through to opaqueLeaf{} below.
 	} else if decoder, ok := multiCauseDecoders[typeKey]; ok {
-		causes := make([]error, len(enc.MultierrorCauses))
-		for i, e := range enc.MultierrorCauses {
-			causes[i] = DecodeError(ctx, *e)
-		}
-		genErr := decoder(ctx, causes, enc.Message, enc.Details.ReportablePayload, payload)
+		causes := decodeCauses(ctx, enc.GetMultierrorCauses(), opts)
+		genErr := decoder(ctx, causes, enc.GetMessage(), details.GetReportablePayload(), payload)
 		if genErr != nil {
 			return genErr
 		}
@@ -75,16 +88,12 @@ func decodeLeaf(ctx context.Context, enc *errorspb.EncodedErrorLeaf) error {
 		}
 	}
 
-	if len(enc.MultierrorCauses) > 0 {
-		causes := make([]error, len(enc.MultierrorCauses))
-		for i, e := range enc.MultierrorCauses {
-			causes[i] = DecodeError(ctx, *e)
-		}
+	if len(enc.GetMultierrorCauses()) > 0 {
 		leaf := &opaqueLeafCauses{
-			causes: causes,
+			causes: decodeCauses(ctx, enc.GetMultierrorCauses(), opts),
 		}
-		leaf.msg = enc.Message
-		leaf.details = enc.Details
+		leaf.msg = enc.GetMessage()
+		leaf.details = details
 		return leaf
 	}
 
@@ -92,34 +101,47 @@ func decodeLeaf(ctx context.Context, enc *errorspb.EncodedErrorLeaf) error {
 	// make it ready to re-encode exactly (if the error leaves over the
 	// network again).
 	return &opaqueLeaf{
-		msg:     enc.Message,
-		details: enc.Details,
+		msg:     enc.GetMessage(),
+		details: details,
 	}
 }
 
-func decodeWrapper(ctx context.Context, enc *errorspb.EncodedWrapper) error {
+func decodeCauses(ctx context.Context, encs []*errorspb.EncodedError, opts DecodeOptions) []error {
+	causes := make([]error, len(encs))
+	for i, e := range encs {
+		if e != nil {
+			causes[i] = DecodeErrorWithOptions(ctx, *e, opts)
+		}
+	}
+	return causes
+}
+
+func decodeWrapper(ctx context.Context, enc *errorspb.EncodedWrapper, opts DecodeOptions) error {
 	// First decode the cause.
-	cause := DecodeError(ctx, enc.Cause)
+	var cause error
+	if enc.GetCause() != nil {
+		cause = DecodeErrorWithOptions(ctx, *enc.GetCause(), opts)
+	}
+
+	details := enc.GetDetails()
 
 	// In case there is a detailed payload, decode it.
 	var payload proto.Message
-	if enc.Details.FullDetails != nil {
-		var d types.DynamicAny
-		err := types.UnmarshalAny(enc.Details.FullDetails, &d)
+	if details.GetFullDetails() != nil {
+		var err error
+		payload, err = protowire.UnmarshalAny(details.GetFullDetails(), opts.Resolver)
 		if err != nil {
 			// It's OK if we can't decode. We'll use
 			// the opaque type below.
 			warningFn(ctx, "error while unmarshalling wrapper error: %+v", err)
-		} else {
-			payload = d.Message
 		}
 	}
 
 	// Do we have a wrapper decoder for this?
-	typeKey := TypeKey(enc.Details.ErrorTypeMark.FamilyName)
+	typeKey := TypeKey(details.GetErrorTypeMark().GetFamilyName())
 	if decoder, ok := decoders[typeKey]; ok {
 		// Yes, use it.
-		genErr := decoder(ctx, cause, enc.Message, enc.Details.ReportablePayload, payload)
+		genErr := decoder(ctx, cause, enc.GetMessage(), details.GetReportablePayload(), payload)
 		if genErr != nil {
 			// Decoding succeeded. Use this.
 			return genErr
@@ -130,9 +152,9 @@ func decodeWrapper(ctx context.Context, enc *errorspb.EncodedWrapper) error {
 	// Otherwise, preserve all details about the original object.
 	return &opaqueWrapper{
 		cause:       cause,
-		prefix:      enc.Message,
-		details:     enc.Details,
-		messageType: MessageType(enc.MessageType),
+		prefix:      enc.GetMessage(),
+		details:     details,
+		messageType: MessageType(enc.GetMessageType()),
 	}
 }
 

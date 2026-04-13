@@ -20,8 +20,7 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/markers"
-	"github.com/gogo/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 // Scenario 1: simple migration, forward direction
@@ -127,12 +126,12 @@ func TestSimpleMigrationForwardPtr(t *testing.T) {
 }
 
 // Scenario 2: simultaneous migration
-// - vA renames foo -> bar
-//   vA calls RegisterTypeMigration("foo", (*bar)(nil))
-// - vB renames foo -> qux
-//   vB calls RegisterTypeMigration("foo", (*qux)(nil))
-// - vA and vB are connected
-// - vA sends an error to vB:
+//   - vA renames foo -> bar
+//     vA calls RegisterTypeMigration("foo", (*bar)(nil))
+//   - vB renames foo -> qux
+//     vB calls RegisterTypeMigration("foo", (*qux)(nil))
+//   - vA and vB are connected
+//   - vA sends an error to vB:
 //   - vA translates the error key upon send from bar to foo's key
 //   - vB recognizes that "foo" refers to qux
 func TestSimultaneousMigration(t *testing.T) {
@@ -219,10 +218,10 @@ func TestMigratedErrorPassingThrough(t *testing.T) {
 
 // Scenario 4: migrated error passing through node that
 // does not know about the error type whatsoever.
-// - v2 renames foo -> bar
-// - v2.a, v2.b and v0 are connected: v2.a -> v0 -> v2.b
-//   (v0 does not know about error foo at all)
-// - v2.a sends an error to v2.b via v0:
+//   - v2 renames foo -> bar
+//   - v2.a, v2.b and v0 are connected: v2.a -> v0 -> v2.b
+//     (v0 does not know about error foo at all)
+//   - v2.a sends an error to v2.b via v0:
 func TestMigratedErrorPassingThroughAsUnknown(t *testing.T) {
 	defer errbase.TestingWithEmptyMigrationRegistry()()
 
@@ -291,12 +290,28 @@ func TestUnknownErrorComparisonAfterHeterogeneousMigration(t *testing.T) {
 	dec2 := errbase.DecodeError(context.Background(), enc2)
 
 	// Main test: check that v0 recognizes the two errors as equivalent.
-	if !markers.Is(dec1, dec2) {
+	if !networkEquivalent(dec1, dec2) {
 		t.Error("equivalence after migration failed")
 	}
-	if !markers.Is(dec2, dec1) {
+	if !networkEquivalent(dec2, dec1) {
 		t.Error("equivalence after migration failed")
 	}
+}
+
+func networkEquivalent(err, reference error) bool {
+	m1 := err
+	m2 := reference
+	for m1 != nil && m2 != nil {
+		if !errbase.EqualTypeMark(m1, m2) {
+			return false
+		}
+		m1 = errbase.UnwrapOnce(m1)
+		m2 = errbase.UnwrapOnce(m2)
+	}
+	if m1 != nil || m2 != nil {
+		return false
+	}
+	return err.Error() == reference.Error()
 }
 
 type fooErr struct{}

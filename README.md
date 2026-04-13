@@ -305,11 +305,11 @@ type](#Making-v-work-with-your-type) below for details.
 Finally, you may want your new error type to be portable across
 the network.
 
-If your error type is a leaf, and already implements `proto.Message`
-(from [gogoproto](https://github.com/gogo/protobuf)), you are all set
-and the errors library will use that automatically. If you do not or
-cannot implement `proto.Message`, or your error type is a wrapper,
-read on.
+If your error type is a leaf, and already implements the standard
+`proto.Message` interface from `google.golang.org/protobuf/proto`, you
+are all set and the errors library will use that automatically. If you
+do not or cannot implement `proto.Message`, or your error type is a
+wrapper, read on.
 
 At a minimum, you will need a *decoder function*: while
 `cockroachdb/errors` already does a bunch of encoding/decoding work on
@@ -320,7 +320,8 @@ Here is the simplest decode function for a new leaf error type and a
 new wrapper type:
 
 ```go
-// note: we use the gogoproto `proto` sub-package.
+import "google.golang.org/protobuf/proto"
+
 func yourDecode(_ string, _ []string, _ proto.Message) error {
    return &yourType{}
 }

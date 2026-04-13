@@ -95,7 +95,7 @@ func TestEncodeDecodeStatus(t *testing.T) {
 		expectDetails []interface{} // nil elements signify errors
 	}{
 		{
-			desc: "gogo status",
+			desc: "gogo status current split",
 			makeStatus: func(t *testing.T, code codes.Code, msg string, details []proto.Message) statusIface {
 				s, err := gogostatus.New(code, msg).WithDetails(details...)
 				require.NoError(t, err)
@@ -111,7 +111,7 @@ func TestEncodeDecodeStatus(t *testing.T) {
 			},
 		},
 		{
-			desc: "grpc status",
+			desc: "standard grpc status current split",
 			makeStatus: func(t *testing.T, code codes.Code, msg string, details []proto.Message) statusIface {
 				s := grpcstatus.New(code, msg)
 				for _, detail := range details {
@@ -151,10 +151,8 @@ func TestEncodeDecodeStatus(t *testing.T) {
 			require.Equal(t, codes.NotFound, status.Code())
 			require.Equal(t, "message", status.Message())
 
-			// Check the details. This varies by implementation, since different
-			// Protobuf decoders are used -- gRPC Status can only decode
-			// standard Protobufs, while gogo Status can only decode gogoproto
-			// Protobufs.
+			// Check the current split: standard grpc.Status only decodes standard
+			// protobufs, while gogo status only decodes gogoproto protobufs.
 			statusDetails := status.Details()
 			require.Equal(t, len(tc.expectDetails), len(statusDetails), "detail mismatch")
 			for i, expectDetail := range tc.expectDetails {

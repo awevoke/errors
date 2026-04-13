@@ -15,10 +15,15 @@
 package errbase_test
 
 import (
+	"context"
+	"errors"
+	"os"
 	"testing"
 
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/testutils"
+	"github.com/gogo/protobuf/proto"
+	"github.com/stretchr/testify/require"
 )
 
 type myE struct{ marker string }
@@ -43,4 +48,61 @@ func TestTypeName(t *testing.T) {
 	tt.Check(!tn1.Equals(tn2))
 	tt.CheckEqual(tn1.FamilyName, tn2.FamilyName)
 	tt.Check(tn1.Extension != tn2.Extension)
+}
+
+func TestEncodeErrorProtoRoundTrip(t *testing.T) {
+	registerProtoRoundTripError(t)
+
+	origErr := &protoRoundTripError{value: "payload"}
+	enc := errbase.EncodeError(context.Background(), origErr)
+
+	leaf := enc.GetLeaf()
+	require.NotNil(t, leaf)
+	require.NotNil(t, leaf.Details.FullDetails)
+
+	decoded := roundTripEncodedErrorProto(t, enc)
+	require.True(t, proto.Equal(&enc, &decoded))
+
+	newErr := errbase.DecodeError(context.Background(), decoded)
+	require.Equal(t, origErr, newErr)
+}
+
+func TestDecodeUnknownFullDetailsReencodesOpaque(t *testing.T) {
+	enc := makeUnknownEncodedError(
+		"type.googleapis.com/errbase_test.DoesNotExist",
+		"errbase_test.DoesNotExist",
+		"missing payload",
+	)
+
+	decoded := errbase.DecodeError(context.Background(), enc)
+	requireOpaqueErrorType(t, decoded)
+	require.Equal(t, "missing payload", decoded.Error())
+
+	reencoded := errbase.EncodeError(context.Background(), decoded)
+	require.True(t, proto.Equal(&enc, &reencoded))
+
+	decodedAgain := errbase.DecodeError(context.Background(), reencoded)
+	requireOpaqueErrorType(t, decodedAgain)
+	require.Equal(t, decoded.Error(), decodedAgain.Error())
+}
+
+func TestFullDetailsCurrentRegistryPath(t *testing.T) {
+	err := &os.PathError{Op: "open", Path: "/tmp/guard", Err: errors.New("boom")}
+	enc := errbase.EncodeError(context.Background(), err)
+
+	wrapper := enc.GetWrapper()
+	require.NotNil(t, wrapper)
+	require.NotNil(t, wrapper.Details.FullDetails)
+
+	decoded := roundTripEncodedErrorProto(t, enc)
+	require.True(t, proto.Equal(&enc, &decoded))
+
+	newErr := errbase.DecodeError(context.Background(), decoded)
+	require.Equal(t, err.Error(), newErr.Error())
+
+	var decodedPath *os.PathError
+	require.ErrorAs(t, newErr, &decodedPath)
+	require.Equal(t, err.Op, decodedPath.Op)
+	require.Equal(t, err.Path, decodedPath.Path)
+	require.Equal(t, err.Err.Error(), decodedPath.Err.Error())
 }

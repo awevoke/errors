@@ -2,9 +2,8 @@
 
 syntax = "proto3";
 package cockroach.errors.errbase.internal;
-option go_package = "internal";
+option go_package = "github.com/cockroachdb/errors/errbase/internal;internal";
 
 message MyPayload {
   int32 val = 1;
 }
-

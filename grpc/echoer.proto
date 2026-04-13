@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 package grpc;
+option go_package = "github.com/cockroachdb/errors/grpc;grpc";
 
 service Echoer {
   rpc Echo (EchoRequest) returns (EchoReply) {}

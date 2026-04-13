@@ -22,7 +22,7 @@ import (
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/redact"
-	"github.com/gogo/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 // Is determines whether one of the causes of the given error or any
@@ -262,8 +262,32 @@ func (m *withMark) SafeFormatError(p errbase.Printer) error {
 
 func encodeMark(_ context.Context, err error) (msg string, _ []string, payload proto.Message) {
 	m := err.(*withMark)
-	payload = &errorspb.MarkPayload{Msg: m.mark.msg, Types: m.mark.types}
+	payload = &errorspb.MarkPayload{Msg: m.mark.msg, Types: markPayloadTypes(m.mark.types)}
 	return "", nil, payload
+}
+
+func markPayloadTypes(types []errorspb.ErrorTypeMark) []*errorspb.ErrorTypeMark {
+	payloadTypes := make([]*errorspb.ErrorTypeMark, len(types))
+	for i := range types {
+		payloadTypes[i] = &errorspb.ErrorTypeMark{
+			FamilyName: types[i].FamilyName,
+			Extension:  types[i].Extension,
+		}
+	}
+	return payloadTypes
+}
+
+func markTypesFromPayload(types []*errorspb.ErrorTypeMark) []errorspb.ErrorTypeMark {
+	markTypes := make([]errorspb.ErrorTypeMark, len(types))
+	for i, t := range types {
+		if t != nil {
+			markTypes[i] = errorspb.ErrorTypeMark{
+				FamilyName: t.GetFamilyName(),
+				Extension:  t.GetExtension(),
+			}
+		}
+	}
+	return markTypes
 }
 
 func decodeMark(_ context.Context, cause error, _ string, _ []string, payload proto.Message) error {
@@ -275,7 +299,7 @@ func decodeMark(_ context.Context, cause error, _ string, _ []string, payload pr
 		// DecodeError use the opaque type.
 		return nil
 	}
-	return &withMark{cause: cause, mark: errorMark{msg: m.Msg, types: m.Types}}
+	return &withMark{cause: cause, mark: errorMark{msg: m.GetMsg(), types: markTypesFromPayload(m.GetTypes())}}
 }
 
 func init() {

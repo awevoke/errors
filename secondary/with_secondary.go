@@ -19,7 +19,7 @@ import (
 	"fmt"
 
 	"github.com/cockroachdb/errors/errbase"
-	"github.com/gogo/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 type withSecondaryError struct {

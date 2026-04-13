@@ -22,7 +22,7 @@ import (
 	"github.com/cockroachdb/errors/errorspb"
 	"github.com/cockroachdb/logtags"
 	"github.com/cockroachdb/redact"
-	"github.com/gogo/protobuf/proto"
+	"google.golang.org/protobuf/proto"
 )
 
 type withContext struct {
@@ -79,7 +79,7 @@ func encodeWithContext(_ context.Context, err error) (string, []string, proto.Me
 	w := err.(*withContext)
 	p := &errorspb.TagsPayload{}
 	for _, t := range w.tags.Get() {
-		p.Tags = append(p.Tags, errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
+		p.Tags = append(p.Tags, &errorspb.TagPayload{Tag: t.Key(), Value: t.ValueStr()})
 	}
 	return "", w.SafeDetails(), p
 }
@@ -95,7 +95,8 @@ func decodeWithContext(
 		// DecodeError use the opaque type.
 		return nil
 	}
-	if len(m.Tags) == 0 && len(redactedTags) == 0 {
+	tags := m.GetTags()
+	if len(tags) == 0 && len(redactedTags) == 0 {
 		// There are no tags stored. Either there are no tags stored, or
 		// we received some new version of the protobuf message which does
 		// things differently. Again, use the opaque type.
@@ -103,8 +104,11 @@ func decodeWithContext(
 	}
 	// Convert the k/v pairs.
 	var b *logtags.Buffer
-	for _, t := range m.Tags {
-		b = b.Add(t.Tag, t.Value)
+	for _, t := range tags {
+		if t == nil {
+			continue
+		}
+		b = b.Add(t.GetTag(), t.GetValue())
 	}
 	return &withContext{cause: cause, tags: b, redactedTags: redactedTags}
 }

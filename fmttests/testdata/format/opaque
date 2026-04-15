@@ -82,25 +82,6 @@ Error types: (1) *errbase.opaqueLeaf
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt inner inner2ndline
@@ -205,32 +186,6 @@ Wraps: (2) ‹inner›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-×
-×
-×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt inner inner2ndline
@@ -367,32 +322,6 @@ Wraps: (2) ‹inner›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrNoFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt inner inner2ndline
@@ -548,39 +477,6 @@ Wraps: (3) ‹inner›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×: ×
-(1) ×
-×
-×
-×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (3) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrNoFmt
-*fmttests.werrFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×: ×"
-(NO STACKTRACE)
 
 run
 nofmt inner inner2ndline
@@ -768,39 +664,6 @@ Wraps: (3) ‹inner›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (3) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueWrapper (3) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrNoFmt
-*fmttests.werrNoFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×: ×"
-(NO STACKTRACE)
 
 run
 nofmt inner inner2ndline
@@ -1007,43 +870,3 @@ Wraps: (4) ‹inner›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueWrapper (4) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×: ×: ×
-(1) ×
-×
-×
-×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (3) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (4) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.werrFmt (2) *errbase.opaqueWrapper (3) *errbase.opaqueWrapper (4) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrNoFmt
-*fmttests.werrNoFmt
-*fmttests.werrFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×: ×: ×"
-(NO STACKTRACE)

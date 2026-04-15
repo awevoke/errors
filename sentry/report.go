@@ -12,7 +12,7 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-package report
+package sentry
 
 import (
 	"fmt"
@@ -22,10 +22,10 @@ import (
 	"github.com/cockroachdb/errors/errbase"
 	"github.com/cockroachdb/errors/withstack"
 	"github.com/cockroachdb/redact"
-	sentry "github.com/getsentry/sentry-go"
+	sentrygo "github.com/getsentry/sentry-go"
 )
 
-// BuildSentryReport builds the components of a sentry report.  This
+// BuildReport builds the components of a sentry report.  This
 // can be used instead of ReportError() below to use additional custom
 // conditions in the reporting or add additional reporting tags.
 //
@@ -97,17 +97,17 @@ import (
 // is included in the Sentry report. This does not affect error types
 // provided by the library, but could impact error types defined by
 // 3rd parties. This limitation may be lifted in a later version.
-func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]interface{}) {
+func BuildReport(err error) (event *sentrygo.Event, extraDetails map[string]interface{}) {
 	if err == nil {
 		// No error: do nothing.
 		return
 	}
 
 	// First step is to collect the details.
-	var stacks []*withstack.ReportableStackTrace
+	var stacks []*ReportableStackTrace
 	var details []errbase.SafeDetailPayload
 	visitAllMulti(err, func(c error) {
-		st := withstack.GetReportableStackTrace(c)
+		st := GetReportableStackTrace(c)
 		stacks = append(stacks, st)
 
 		sd := errbase.GetSafeDetails(c)
@@ -157,7 +157,7 @@ func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]
 	var typesBuf strings.Builder
 
 	// exceptions accumulates the Exception payloads.
-	var exceptions []sentry.Exception
+	var exceptions []sentrygo.Exception
 
 	// leafErrorType is the type name of the leaf error.
 	// This is used as fallback when no Exception payload is generated.
@@ -225,7 +225,7 @@ func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]
 			if excType.Len() == 0 {
 				excType.WriteString("<unknown error>")
 			}
-			exc := sentry.Exception{
+			exc := sentrygo.Exception{
 				Module:     module,
 				Stacktrace: st,
 				Type:       excType.String(),
@@ -292,7 +292,7 @@ func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]
 	reverseExceptionOrder(exceptions)
 
 	// Start assembling the event.
-	event = sentry.NewEvent()
+	event = sentrygo.NewEvent()
 	event.Message = longMsgBuf.String()
 	event.Exception = exceptions
 
@@ -302,7 +302,7 @@ func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]
 		// info from (if we had, we'd have an Exception payload at that
 		// point). Instead, we make a best effort using bits and pieces
 		// assembled so far.
-		event.Exception = append(event.Exception, sentry.Exception{
+		event.Exception = append(event.Exception, sentrygo.Exception{
 			Module: module,
 			Type:   leafErrorType,
 			Value:  firstDetailLine,
@@ -351,6 +351,13 @@ func BuildSentryReport(err error) (event *sentry.Event, extraDetails map[string]
 	return event, extras
 }
 
+// BuildSentryReport builds the components of a sentry report.
+//
+// Deprecated: use BuildReport.
+func BuildSentryReport(err error) (*sentrygo.Event, map[string]interface{}) {
+	return BuildReport(err)
+}
+
 var redactedMarker = redact.RedactableString(redact.RedactedMarker()).StripMarkers()
 
 // ReportError reports the given error to Sentry. The caller is responsible for
@@ -363,7 +370,7 @@ var redactedMarker = redact.RedactableString(redact.RedactedMarker()).StripMarke
 // configured or Sentry client decided to not report the error (due to
 // configured sampling rate, callbacks, Sentry's event processors, etc).
 func ReportError(err error) (eventID string) {
-	event, extraDetails := BuildSentryReport(err)
+	event, extraDetails := BuildReport(err)
 
 	for extraKey, extraValue := range extraDetails {
 		event.Extra[extraKey] = extraValue
@@ -381,7 +388,7 @@ func ReportError(err error) (eventID string) {
 		event.Tags[key] = value
 	}
 
-	res := sentry.CaptureEvent(event)
+	res := sentrygo.CaptureEvent(event)
 	if res != nil {
 		eventID = string(*res)
 	}
@@ -396,7 +403,7 @@ func lastPathComponent(tn string) string {
 	return tn
 }
 
-func reverseExceptionOrder(ex []sentry.Exception) {
+func reverseExceptionOrder(ex []sentrygo.Exception) {
 	for i := 0; i < len(ex)/2; i++ {
 		ex[i], ex[len(ex)-i-1] = ex[len(ex)-i-1], ex[i]
 	}

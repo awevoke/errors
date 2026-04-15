@@ -41,7 +41,7 @@ require (?s)innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func49\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func49\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -87,7 +87,7 @@ require (?s)innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func49\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func49\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -111,7 +111,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func49
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -123,7 +123,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -170,7 +170,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func49
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -182,7 +182,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -203,87 +203,6 @@ Wraps: (3) ‹innerone›
   |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
   | Error types: (1) *errbase.opaqueLeaf
 Error types: (1) *assert.withAssertionFailure (2) *errbase.opaqueWrapper (3) *barriers.barrierErr
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: ×
-(1) assertion failure
-Wraps: (2)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func49
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (3) ×
-  | ×
-  | -- cause hidden behind barrier
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Error types: (1) *assert.withAssertionFailure (2) *errbase.opaqueWrapper (3) *barriers.barrierErr
--- report composition:
-*barriers.barrierErr: masked error: ×
-<path>:<lineno>: *withstack.withStack (top exception)
-*assert.withAssertionFailure
-== Extra "error types"
-github.com/cockroachdb/errors/barriers/*barriers.barrierErr (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/assert/*assert.withAssertionFailure (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*barriers.barrierErr: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -331,7 +250,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func50\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func50\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -380,7 +299,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func50\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func50\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -405,7 +324,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func50
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -417,7 +336,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -467,7 +386,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func50
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -479,7 +398,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -502,91 +421,6 @@ Wraps: (4) ‹innerone›
   |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
   | Error types: (1) *errbase.opaqueLeaf
 Error types: (1) *assert.withAssertionFailure (2) *errbase.opaqueWrapper (3) *errutil.withPrefix (4) *barriers.barrierErr
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: assertmsg: ×: ×
-(1) assertion failure
-Wraps: (2)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func50
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (3) assertmsg: ×
-  | ×
-Wraps: (4) ×
-  | ×
-  | -- cause hidden behind barrier
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Error types: (1) *assert.withAssertionFailure (2) *errbase.opaqueWrapper (3) *errutil.withPrefix (4) *barriers.barrierErr
--- report composition:
-*barriers.barrierErr: masked error: ×
-*errutil.withPrefix: assertmsg: ×
-<path>:<lineno>: *withstack.withStack (top exception)
-*assert.withAssertionFailure
-== Extra "error types"
-github.com/cockroachdb/errors/barriers/*barriers.barrierErr (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withPrefix (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/assert/*assert.withAssertionFailure (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*barriers.barrierErr: assertmsg: ×: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -691,30 +525,6 @@ Error types: (1) *barriers.barrierErr
   |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
   | Error types: (1) *errbase.opaqueLeaf
 Error types: (1) *barriers.barrierErr
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  | -- cause hidden behind barrier
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Error types: (1) *barriers.barrierErr
--- report composition:
-*barriers.barrierErr: masked error: ×
-== Extra "error types"
-github.com/cockroachdb/errors/barriers/*barriers.barrierErr (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*barriers.barrierErr"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -853,32 +663,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegate
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrDelegate
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegate (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1011,30 +795,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegateEmpty
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrDelegateEmpty
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegateEmpty (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1167,30 +927,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegateNoPrefix
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrDelegateNoPrefix
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrDelegateNoPrefix (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1289,29 +1025,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *hintdetail.withDetail (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *hintdetail.withDetail (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*hintdetail.withDetail
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/hintdetail/*hintdetail.withDetail (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1408,28 +1121,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *domains.withDomain (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) mydomain
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *domains.withDomain (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*domains.withDomain: mydomain
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/domains/*domains.withDomain (*::mydomain)
-== Exception 1 (Module: "mydomain")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1528,29 +1219,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.werrWithElidedCause (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.werrWithElidedCause (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrWithElidedCause
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrWithElidedCause (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1683,30 +1351,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrEmpty
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrEmpty
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrEmpty (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -1845,32 +1489,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -2012,32 +1630,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrFmto
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrFmto
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmto (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -2179,32 +1771,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrFmtoDelegate
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrFmtoDelegate
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmtoDelegate (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -2343,32 +1909,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrFmtp
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrFmtp
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrFmtp (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -2512,33 +2052,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: fmt/*fmt.wrapError
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmt.wrapError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-fmt/*fmt.wrapError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -2602,7 +2115,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                     FamilyName:    "github.com/pkg/errors/*errors.fundamental",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func23\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func23\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
         },
@@ -2664,7 +2177,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                     FamilyName:    "github.com/pkg/errors/*errors.fundamental",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func23\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func23\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
         },
@@ -2695,7 +2208,7 @@ Wraps: (2) sibling error in wrapper
   |
   | github.com/cockroachdb/errors/fmttests.init.func23
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -2707,7 +2220,7 @@ Wraps: (2) sibling error in wrapper
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -2756,7 +2269,7 @@ Wraps: (2) ‹sibling error in wrapper›
   |
   | github.com/cockroachdb/errors/fmttests.init.func23
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -2768,7 +2281,7 @@ Wraps: (2) ‹sibling error in wrapper›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -2784,88 +2297,6 @@ Wraps: (3) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueLeafCauses (2) *errbase.opaqueLeaf (3) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: fmt/*fmt.wrapErrors
-Wraps: (2) ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/pkg/errors/*errors.fundamental
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func23
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (3) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueLeafCauses (2) *errbase.opaqueLeaf (3) *errbase.opaqueLeaf
--- report composition:
-<path>:<lineno>: *errors.fundamental (top exception)
-*fmttests.errNoFmt
-*fmt.wrapErrors
-== Extra "error types"
-github.com/pkg/errors/*errors.fundamental (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-fmt/*fmt.wrapErrors (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*errors.fundamental: ×"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -3009,33 +2440,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: fmt/*fmt.wrapError
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmt.wrapError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-fmt/*fmt.wrapError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -3177,32 +2581,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: fmt/*fmt.wrapError
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmt.wrapError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-fmt/*fmt.wrapError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -3315,33 +2693,6 @@ Wraps: (2) ‹innerone›
   |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
   | Error types: (1) *errbase.opaqueLeaf
 Error types: (1) *domains.withDomain (2) *barriers.barrierErr
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) error domain: pkg <path>
-Wraps: (2) ×
-  | ×
-  | -- cause hidden behind barrier
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Error types: (1) *domains.withDomain (2) *barriers.barrierErr
--- report composition:
-*barriers.barrierErr: masked error: ×
-*domains.withDomain: error domain: pkg <path>
-== Extra "error types"
-github.com/cockroachdb/errors/barriers/*barriers.barrierErr (*::)
-github.com/cockroachdb/errors/domains/*domains.withDomain (*::error domain: pkg <path>)
-== Exception 1 (Module: "error domain: pkg <path>")
-Type: "*barriers.barrierErr"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -3440,29 +2791,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *hintdetail.withHint (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *hintdetail.withHint (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*hintdetail.withHint
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/hintdetail/*hintdetail.withHint (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -3563,30 +2891,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *issuelink.withIssueLink (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) issue: https://mysite
-  | detail: outerthree
-  | outerfour
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *issuelink.withIssueLink (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*issuelink.withIssueLink: https://mysite
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/issuelink/*issuelink.withIssueLink (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -3633,7 +2937,7 @@ require (?s)innerone.*innertwo
                     FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func63\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func63\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
             messageType: 0,
@@ -3679,7 +2983,7 @@ require (?s)innerone.*innertwo
                     FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func63\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func63\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
             messageType: 0,
@@ -3709,7 +3013,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func63
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -3721,7 +3025,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -3770,7 +3074,7 @@ Wraps: (2)
   |
   | github.com/cockroachdb/errors/fmttests.init.func63
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -3782,7 +3086,7 @@ Wraps: (2)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -3800,89 +3104,6 @@ Wraps: (4) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *join.joinError (2) *errbase.opaqueWrapper (3) *errutil.leafError (4) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) ×
-  | ×
-  | outerthree
-  | outerfour
-Wraps: (2)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func63
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-└─ Wraps: (3) outerthree
-  | outerfour
-Wraps: (4) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *join.joinError (2) *errbase.opaqueWrapper (3) *errutil.leafError (4) *errbase.opaqueLeaf
--- report composition:
-*errutil.leafError: outerthree
-<path>:<lineno>: *withstack.withStack (top exception)
-*fmttests.errNoFmt
-*join.joinError
-== Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/join/*join.joinError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*errutil.leafError: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -4015,30 +3236,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrMigrated
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrMigrated
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrMigrated (some/previous/path/prevpkg.prevType::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -4139,29 +3336,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errutil.withPrefix (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-outerthree: ×
-(1) outerthree
-  | outerfour
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errutil.withPrefix (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errutil.withPrefix: outerthree
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withPrefix (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "outerthree: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -4207,7 +3381,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4233,7 +3407,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4253,7 +3427,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4307,7 +3481,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4333,7 +3507,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4353,7 +3527,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func42\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4386,7 +3560,7 @@ Wraps: (2) B
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4398,7 +3572,7 @@ Wraps: (2) B
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4416,7 +3590,7 @@ Wraps: (2) B
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4428,7 +3602,7 @@ Wraps: (2) B
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4447,7 +3621,7 @@ Wraps: (7) C
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4459,7 +3633,7 @@ Wraps: (7) C
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4505,7 +3679,7 @@ Wraps: (2) ‹B›
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4517,7 +3691,7 @@ Wraps: (2) ‹B›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4535,7 +3709,7 @@ Wraps: (2) ‹B›
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4547,7 +3721,7 @@ Wraps: (2) ‹B›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4566,7 +3740,7 @@ Wraps: (7) ‹C›
   |
   | github.com/cockroachdb/errors/fmttests.init.func42
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -4578,7 +3752,7 @@ Wraps: (7) ‹C›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -4596,215 +3770,6 @@ Wraps: (7) ‹C›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.errMultiCause (2) *fmttests.errMultiCause (3) *errbase.opaqueWrapper (4) *errutil.leafError (5) *errbase.opaqueWrapper (6) *errutil.leafError (7) *fmttests.errMultiCause (8) *errbase.opaqueWrapper (9) *errutil.leafError (10) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×: included 2: included 1: ×: outerthree: ×
-(1) ×
-Wraps: (2) ×
-└─ Wraps: (3)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func42
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (4) included 2
-└─ Wraps: (5)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func42
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (6) included 1
-Wraps: (7) ×
-└─ Wraps: (8)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func42
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (9) outerthree
-  | outerfour
-└─ Wraps: (10) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.errMultiCause (2) *fmttests.errMultiCause (3) *errbase.opaqueWrapper (4) *errutil.leafError (5) *errbase.opaqueWrapper (6) *errutil.leafError (7) *fmttests.errMultiCause (8) *errbase.opaqueWrapper (9) *errutil.leafError (10) *errbase.opaqueLeaf
--- report composition:
-*errutil.leafError: included 2
-<path>:<lineno>: *withstack.withStack (top exception)
-*errutil.leafError: included 1
-<path>:<lineno>: *withstack.withStack (1)
-*fmttests.errMultiCause
-*errutil.leafError: outerthree
-<path>:<lineno>: *withstack.withStack (2)
-*fmttests.errNoFmt
-*fmttests.errMultiCause
-*fmttests.errMultiCause
-(check the extra data payloads)
-== Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "(2) <path>:<lineno> ...funcNN...
-Title: "*withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
-== Exception 2 (Module: "error domain: <none>")
-Type: "(1) <path>:<lineno> ...funcNN...
-Title: "*withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
-== Exception 3 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*errutil.leafError: ×: ×: included 2: included 1: ×: outerthree: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -4850,7 +3815,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4876,7 +3841,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4896,7 +3861,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4950,7 +3915,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4976,7 +3941,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -4996,7 +3961,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                             Extension:     "",
                         },
-                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func43\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                         FullDetails:       (*anypb.Any)(nil),
                     },
                     messageType: 0,
@@ -5029,7 +3994,7 @@ Wraps: (2) B
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5041,7 +4006,7 @@ Wraps: (2) B
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5059,7 +4024,7 @@ Wraps: (2) B
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5071,7 +4036,7 @@ Wraps: (2) B
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5090,7 +4055,7 @@ Wraps: (7) C
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5102,7 +4067,7 @@ Wraps: (7) C
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5148,7 +4113,7 @@ Wraps: (2) ‹B›
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5160,7 +4125,7 @@ Wraps: (2) ‹B›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5178,7 +4143,7 @@ Wraps: (2) ‹B›
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5190,7 +4155,7 @@ Wraps: (2) ‹B›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5209,7 +4174,7 @@ Wraps: (7) ‹C›
   |
   | github.com/cockroachdb/errors/fmttests.init.func43
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5221,7 +4186,7 @@ Wraps: (7) ‹C›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5239,215 +4204,6 @@ Wraps: (7) ‹C›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fmttests.errMultiCause (2) *fmttests.errMultiCause (3) *errbase.opaqueWrapper (4) *errutil.leafError (5) *errbase.opaqueWrapper (6) *errutil.leafError (7) *fmttests.errMultiCause (8) *errbase.opaqueWrapper (9) *errutil.leafError (10) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×: ×: outerthree: ×
-(1) ×
-Wraps: (2) ×
-└─ Wraps: (3)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func43
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (4) elided 2
-└─ Wraps: (5)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func43
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (6) elided 1
-Wraps: (7) ×
-└─ Wraps: (8)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func43
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-  └─ Wraps: (9) outerthree
-  | outerfour
-└─ Wraps: (10) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fmttests.errMultiCause (2) *fmttests.errMultiCause (3) *errbase.opaqueWrapper (4) *errutil.leafError (5) *errbase.opaqueWrapper (6) *errutil.leafError (7) *fmttests.errMultiCause (8) *errbase.opaqueWrapper (9) *errutil.leafError (10) *errbase.opaqueLeaf
--- report composition:
-*errutil.leafError: elided 2
-<path>:<lineno>: *withstack.withStack (top exception)
-*errutil.leafError: elided 1
-<path>:<lineno>: *withstack.withStack (1)
-*fmttests.errMultiCause
-*errutil.leafError: outerthree
-<path>:<lineno>: *withstack.withStack (2)
-*fmttests.errNoFmt
-*fmttests.errMultiCause
-*fmttests.errMultiCause
-(check the extra data payloads)
-== Extra "error types"
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-github.com/cockroachdb/errors/errutil/*errutil.leafError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.errMultiCause (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "(2) <path>:<lineno> ...funcNN...
-Title: "*withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
-== Exception 2 (Module: "error domain: <none>")
-Type: "(1) <path>:<lineno> ...funcNN...
-Title: "*withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
-== Exception 3 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*errutil.leafError: ×: ×: ×: outerthree: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -5511,7 +4267,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func46\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func46\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -5575,7 +4331,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func46\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func46\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -5598,7 +4354,7 @@ new-style (outerthree
   |
   | github.com/cockroachdb/errors/fmttests.init.func46
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5610,7 +4366,7 @@ new-style (outerthree
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5663,7 +4419,7 @@ new-style (‹outerthree›
   |
   | github.com/cockroachdb/errors/fmttests.init.func46
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5675,7 +4431,7 @@ new-style (‹outerthree›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -5702,94 +4458,6 @@ Wraps: (4) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withNewMessage (4) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: new-style (×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func46
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) secondary error attachment
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Wraps: (3) new-style (×
-  | ×) :: ×
-  | × ::
-Wraps: (4) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withNewMessage (4) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errutil.withNewMessage: new-style (×
-*secondary.withSecondaryError
-<path>:<lineno>: *withstack.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withNewMessage (*::)
-github.com/cockroachdb/errors/secondary/*secondary.withSecondaryError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: new-style (×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -5853,7 +4521,7 @@ require (?s)innerone.*innertwo.*outerthree.*outerfour
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func47\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func47\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -5917,7 +4585,7 @@ require (?s)innerone.*innertwo.*outerthree.*outerfour
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func47\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func47\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -5940,7 +4608,7 @@ outerfour)
   |
   | github.com/cockroachdb/errors/fmttests.init.func47
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -5952,7 +4620,7 @@ outerfour)
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -6005,7 +4673,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *e
   |
   | github.com/cockroachdb/errors/fmttests.init.func47
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -6017,7 +4685,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *e
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -6044,94 +4712,6 @@ Wraps: (4) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withNewMessage (4) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: :: ×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func47
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) secondary error attachment
-  | ×
-  | (1) ×
-  |   | ×
-  |   |
-  |   | (opaque error leaf)
-  |   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-  | Error types: (1) *errbase.opaqueLeaf
-Wraps: (3) :: ×
-  | × :: new-style (×
-  | ×)
-Wraps: (4) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withNewMessage (4) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errutil.withNewMessage: :: ×
-*secondary.withSecondaryError
-<path>:<lineno>: *withstack.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withNewMessage (*::)
-github.com/cockroachdb/errors/secondary/*secondary.withSecondaryError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: :: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -6273,32 +4853,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrNoFmt
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrNoFmt (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -6420,28 +4974,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *os.LinkError (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-link × ×: ×
-(1) link × ×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *os.LinkError (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*os.LinkError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-os/*os.LinkError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "link × ×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -6579,31 +5111,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  |
-  | (opaque error wrapper)
-  | type name: net/*net.OpError
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*net.OpError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-net/*net.OpError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -6723,28 +5230,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *fs.PathError (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-link ×: ×
-(1) link ×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *fs.PathError (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fs.PathError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-io/fs/*fs.PathError (os/*os.PathError::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "link ×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -6862,28 +5347,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *os.SyscallError (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-open: ×
-(1) open
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *os.SyscallError (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*os.SyscallError
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-os/*os.SyscallError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "open: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -7006,29 +5469,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errors.withMessage (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errors.withMessage (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errors.withMessage
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/pkg/errors/*errors.withMessage (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -7074,7 +5514,7 @@ require (?s)innerone.*innertwo
             FamilyName:    "github.com/pkg/errors/*errors.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func30\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func30\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -7115,7 +5555,7 @@ require (?s)innerone.*innertwo
             FamilyName:    "github.com/pkg/errors/*errors.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func30\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func30\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -7137,7 +5577,7 @@ innerone
   |
   | github.com/cockroachdb/errors/fmttests.init.func30
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -7149,7 +5589,7 @@ innerone
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -7190,7 +5630,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   |
   | github.com/cockroachdb/errors/fmttests.init.func30
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -7202,7 +5642,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -7218,79 +5658,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: ×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/pkg/errors/*errors.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func30
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-<path>:<lineno>: *errors.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/pkg/errors/*errors.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: ×\nvia *errors.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -7389,29 +5756,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *safedetails.withSafeDetails (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) safe ×
-  | ×
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *safedetails.withSafeDetails (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*safedetails.withSafeDetails: safe ×
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/safedetails/*safedetails.withSafeDetails (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -7550,32 +5894,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×: ×
-(1) ×
-  | ×
-  |
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.werrSafeFormat
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*fmttests.werrSafeFormat
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/fmttests/*fmttests.werrSafeFormat (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×: ×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -7618,7 +5936,7 @@ require (?s)innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func58\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func58\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -7662,7 +5980,7 @@ require (?s)innerone.*innertwo
                 FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                 Extension:     "",
             },
-            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func58\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+            ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func58\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
             FullDetails:       (*anypb.Any)(nil),
         },
         messageType: 0,
@@ -7687,7 +6005,7 @@ innerone
   |   |
   |   | github.com/cockroachdb/errors/fmttests.init.func58
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -7699,7 +6017,7 @@ innerone
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -7745,7 +6063,7 @@ Error types: (1) *secondary.withSecondaryError (2) *errbase.opaqueLeaf
   |   |
   |   | github.com/cockroachdb/errors/fmttests.init.func58
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -7757,7 +6075,7 @@ Error types: (1) *secondary.withSecondaryError (2) *errbase.opaqueLeaf
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -7776,61 +6094,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *secondary.withSecondaryError (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) secondary error attachment
-  | outerthree
-  | (1)
-  |   | (opaque error wrapper)
-  |   | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  |   | reportable 0:
-  |   |
-  |   | github.com/cockroachdb/errors/fmttests.init.func58
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirective.func1
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirective
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runTestInternal
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.RunTest
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.Walk
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.Walk.func1
-  |   | <tab><path>:<lineno>
-  |   | testing.tRunner
-  |   | <tab><path>:<lineno>
-  |   | runtime.goexit
-  |   | <tab><path>:<lineno>
-  | Wraps: (2) outerthree
-  |   | outerfour
-  | Error types: (1) *errbase.opaqueWrapper (2) *errutil.leafError
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *secondary.withSecondaryError (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*secondary.withSecondaryError: details for github.com/cockroachdb/errors/withstack/*withstack.withStack:::
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/secondary/*secondary.withSecondaryError (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -7871,7 +6134,7 @@ require (?s)innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func44\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func44\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -7912,7 +6175,7 @@ require (?s)innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func44\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func44\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -7934,7 +6197,7 @@ innerone
   |
   | github.com/cockroachdb/errors/fmttests.init.func44
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -7946,7 +6209,7 @@ innerone
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -7987,7 +6250,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   |
   | github.com/cockroachdb/errors/fmttests.init.func44
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -7999,7 +6262,7 @@ Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -8015,79 +6278,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: ×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func44
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-<path>:<lineno>: *withstack.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -8232,28 +6422,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *contexttags.withContext (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) tags: [k×,safe=×]
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *contexttags.withContext (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*contexttags.withContext: k×
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/contexttags/*contexttags.withContext (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -8352,29 +6520,6 @@ Wraps: (2) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *telemetrykeys.withTelemetry (2) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-×
-(1) keys: [somekey outerthree
-  | outerfour]
-Wraps: (2) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *telemetrykeys.withTelemetry (2) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*telemetrykeys.withTelemetry: somekey
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/telemetrykeys/*telemetrykeys.withTelemetry (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "*fmttests.errNoFmt"
-Title: "×"
-(NO STACKTRACE)
 
 run
 nofmt innerone innertwo
@@ -8418,7 +6563,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func48\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func48\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -8462,7 +6607,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func48\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func48\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -8485,7 +6630,7 @@ new-stylew outerthree: innerone
   |
   | github.com/cockroachdb/errors/fmttests.init.func48
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -8497,7 +6642,7 @@ new-stylew outerthree: innerone
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -8541,7 +6686,7 @@ new-stylew ‹outerthree›: ‹innerone›
   |
   | github.com/cockroachdb/errors/fmttests.init.func48
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -8553,7 +6698,7 @@ new-stylew ‹outerthree›: ‹innerone›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -8571,83 +6716,6 @@ Wraps: (3) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *errutil.withPrefix (3) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: new-stylew ×: ×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func48
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) new-stylew ×
-  | ×
-Wraps: (3) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *errutil.withPrefix (3) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errutil.withPrefix: new-stylew ×
-<path>:<lineno>: *withstack.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withPrefix (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: new-stylew ×: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...
 
 run
 nofmt innerone innertwo
@@ -8694,7 +6762,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                     FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
             messageType: 0,
@@ -8713,7 +6781,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -8760,7 +6828,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
                     FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
                     Extension:     "",
                 },
-                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+                ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
                 FullDetails:       (*anypb.Any)(nil),
             },
             messageType: 0,
@@ -8779,7 +6847,7 @@ require (?s)outerthree.*outerfour.*innerone.*innertwo
             FamilyName:    "github.com/cockroachdb/errors/withstack/*withstack.withStack",
             Extension:     "",
         },
-        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func2\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
+        ReportablePayload: {"\ngithub.com/cockroachdb/errors/fmttests.init.func59\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirective\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runDirectiveOrSubTest\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.runTestInternal\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.RunTest\n\<path>:<lineno>\ngithub.com/cockroachdb/errors/fmttests.TestDatadriven.func1\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk\n\<path>:<lineno>\ngithub.com/cockroachdb/datadriven.Walk.func1\n\<path>:<lineno>\ntesting.tRunner\n\<path>:<lineno>\nruntime.goexit\n\<path>:<lineno>"},
         FullDetails:       (*anypb.Any)(nil),
     },
     messageType: 0,
@@ -8802,7 +6870,7 @@ new-style outerthree: innerone
   |
   | github.com/cockroachdb/errors/fmttests.init.func59
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -8814,7 +6882,7 @@ new-style outerthree: innerone
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -8833,7 +6901,7 @@ Wraps: (2) secondary error attachment
   |   |
   |   | github.com/cockroachdb/errors/fmttests.init.func59
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -8845,7 +6913,7 @@ Wraps: (2) secondary error attachment
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -8891,7 +6959,7 @@ new-style ‹outerthree›: ‹innerone›
   |
   | github.com/cockroachdb/errors/fmttests.init.func59
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.runDirective.func1
   | <tab><path>:<lineno>
@@ -8903,7 +6971,7 @@ new-style ‹outerthree›: ‹innerone›
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.RunTest
   | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   | <tab><path>:<lineno>
   | github.com/cockroachdb/datadriven.Walk
   | <tab><path>:<lineno>
@@ -8922,7 +6990,7 @@ Wraps: (2) secondary error attachment
   |   |
   |   | github.com/cockroachdb/errors/fmttests.init.func59
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1.1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.runDirective.func1
   |   | <tab><path>:<lineno>
@@ -8934,7 +7002,7 @@ Wraps: (2) secondary error attachment
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.RunTest
   |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
+  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func1
   |   | <tab><path>:<lineno>
   |   | github.com/cockroachdb/datadriven.Walk
   |   | <tab><path>:<lineno>
@@ -8954,115 +7022,3 @@ Wraps: (4) ‹innerone›
   | (opaque error leaf)
   | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
 Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withPrefix (4) *errbase.opaqueLeaf
-=====
-===== Sentry reporting
-=====
-== Message payload
-<path>:<lineno>: new-style ×: ×
-(1)
-  | (opaque error wrapper)
-  | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  | reportable 0:
-  |
-  | github.com/cockroachdb/errors/fmttests.init.func59
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective.func1
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirective
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.runTestInternal
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.RunTest
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk
-  | <tab><path>:<lineno>
-  | github.com/cockroachdb/datadriven.Walk.func1
-  | <tab><path>:<lineno>
-  | testing.tRunner
-  | <tab><path>:<lineno>
-  | runtime.goexit
-  | <tab><path>:<lineno>
-Wraps: (2) secondary error attachment
-  | payload
-  | (1)
-  |   | (opaque error wrapper)
-  |   | type name: github.com/cockroachdb/errors/withstack/*withstack.withStack
-  |   | reportable 0:
-  |   |
-  |   | github.com/cockroachdb/errors/fmttests.init.func59
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2.1
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirective.func1
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirective
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runDirectiveOrSubTest
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.runTestInternal
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.RunTest
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/errors/fmttests.TestDatadriven.func2
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.Walk
-  |   | <tab><path>:<lineno>
-  |   | github.com/cockroachdb/datadriven.Walk.func1
-  |   | <tab><path>:<lineno>
-  |   | testing.tRunner
-  |   | <tab><path>:<lineno>
-  |   | runtime.goexit
-  |   | <tab><path>:<lineno>
-  | Wraps: (2) payload
-  | Error types: (1) *errbase.opaqueWrapper (2) *errutil.leafError
-Wraps: (3) new-style ×
-  | × (payload)
-Wraps: (4) ×
-  | ×
-  |
-  | (opaque error leaf)
-  | type name: github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt
-Error types: (1) *errbase.opaqueWrapper (2) *secondary.withSecondaryError (3) *errutil.withPrefix (4) *errbase.opaqueLeaf
--- report composition:
-*fmttests.errNoFmt
-*errutil.withPrefix: new-style ×
-*secondary.withSecondaryError: details for github.com/cockroachdb/errors/withstack/*withstack.withStack:::
-<path>:<lineno>: *withstack.withStack (top exception)
-== Extra "error types"
-github.com/cockroachdb/errors/fmttests/*fmttests.errNoFmt (*::)
-github.com/cockroachdb/errors/errutil/*errutil.withPrefix (*::)
-github.com/cockroachdb/errors/secondary/*secondary.withSecondaryError (*::)
-github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
-== Exception 1 (Module: "error domain: <none>")
-Type: "<path>:<lineno> ...funcNN...
-Title: "*fmttests.errNoFmt: new-style ×: ×\nvia *withstack.withStack"
-<path>:<lineno>:
-   (runtime) goexit()
-<path>:<lineno>:
-   (testing) tRunner()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.Walk)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) Walk()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) RunTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runTestInternal()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirectiveOrSubTest()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven) runDirective()
-<path>:<lineno>:
-   (github.com/cockroachdb/datadriven.runDirective)...funcNN...
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.TestDatadriven.func2) 1()
-<path>:<lineno>:
-   (github.com/cockroachdb/errors/fmttests.init)...funcNN...

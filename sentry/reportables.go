@@ -12,18 +12,18 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-package report
+package sentry
 
 import (
 	"bytes"
 	"fmt"
 
-	"github.com/getsentry/sentry-go"
+	sentrygo "github.com/getsentry/sentry-go"
 )
 
 // StackTrace is an object suitable for inclusion in errors that can
 // ultimately be reported with ReportInternalError() or similar.
-type StackTrace = sentry.Stacktrace
+type StackTrace = sentrygo.Stacktrace
 
 // PrintStackTrace produces a human-readable partial representation of
 // the stack trace.

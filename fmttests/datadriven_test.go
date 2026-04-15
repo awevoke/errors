@@ -26,7 +26,6 @@ import (
 	"sort"
 	"strings"
 	"testing"
-	"time"
 
 	"github.com/cockroachdb/datadriven"
 	"github.com/cockroachdb/errors/barriers"
@@ -37,14 +36,12 @@ import (
 	"github.com/cockroachdb/errors/hintdetail"
 	"github.com/cockroachdb/errors/issuelink"
 	"github.com/cockroachdb/errors/join"
-	"github.com/cockroachdb/errors/report"
 	"github.com/cockroachdb/errors/safedetails"
 	"github.com/cockroachdb/errors/secondary"
 	"github.com/cockroachdb/errors/telemetrykeys"
 	"github.com/cockroachdb/errors/withstack"
 	"github.com/cockroachdb/logtags"
 	"github.com/cockroachdb/redact"
-	"github.com/getsentry/sentry-go"
 	"github.com/kr/pretty"
 	pkgErr "github.com/pkg/errors"
 )
@@ -495,8 +492,7 @@ func generateFiles() {
 	}
 }
 
-// TestDatadriven exercises error formatting and Sentry report
-// formatting using the datadriven package.
+// TestDatadriven exercises error formatting using the datadriven package.
 //
 // The test DSL accepts a single directive "run" with a sub-DSL
 // for each test. The sub-DSL accepts 3 types of directive:
@@ -519,25 +515,6 @@ func TestDatadriven(t *testing.T) {
 	if *generateTestFiles {
 		generateFiles()
 	}
-
-	// events collected the emitted sentry report on each test.
-	var events []*sentry.Event
-
-	client, err := sentry.NewClient(
-		sentry.ClientOptions{
-			// Install a Transport that locally records events rather than
-			// sending them to Sentry over HTTP.
-			Transport: interceptingTransport{
-				SendFunc: func(event *sentry.Event) {
-					events = append(events, event)
-				},
-			},
-		},
-	)
-	if err != nil {
-		t.Fatal(err)
-	}
-	sentry.CurrentHub().BindClient(client)
 
 	datadriven.Walk(t, testPath, func(t *testing.T, path string) {
 		datadriven.RunTest(t, path,
@@ -776,43 +753,6 @@ func TestDatadriven(t *testing.T) {
 				}
 				checkMarkers(&buf, d, t, string(vprErr))
 
-				buf.WriteString("=====\n===== Sentry reporting\n=====\n")
-
-				events = nil
-				if eventID := report.ReportError(resultErr); eventID == "" {
-					d.Fatalf(t, "Sentry eventID is empty")
-				}
-				// t.Logf("received events: %# v", pretty.Formatter(events))
-				if len(events) != 1 {
-					d.Fatalf(t, "more than one event received")
-				}
-				se := events[0]
-
-				fmt.Fprintf(&buf, "== Message payload\n%s\n", se.Message)
-
-				// Make the extra key deterministic.
-				extraNames := make([]string, 0, len(se.Extra))
-				for ek := range se.Extra {
-					extraNames = append(extraNames, ek)
-				}
-				sort.Strings(extraNames)
-				for _, ek := range extraNames {
-					extraS := fmt.Sprintf("%v", se.Extra[ek])
-					fmt.Fprintf(&buf, "== Extra %q\n%s\n", ek, strings.TrimSpace(extraS))
-				}
-
-				for i, exc := range se.Exception {
-					fmt.Fprintf(&buf, "== Exception %d (Module: %q)\nType: %q\nTitle: %q\n", i+1, exc.Module, exc.Type, exc.Value)
-					if exc.Stacktrace == nil {
-						fmt.Fprintf(&buf, "(NO STACKTRACE)\n")
-					} else {
-						for _, f := range exc.Stacktrace.Frames {
-							fmt.Fprintf(&buf, "%s:%d:\n", f.Filename, f.Lineno)
-							fmt.Fprintf(&buf, "   (%s) %s()\n", f.Module, f.Function)
-						}
-					}
-				}
-
 				return fmtClean(buf.String())
 			})
 	})
@@ -863,28 +803,4 @@ func strfy(args []arg) string {
 		sp = "\n"
 	}
 	return out.String()
-}
-
-// interceptingTransport is an implementation of sentry.Transport that
-// delegates calls to the SendEvent method to the send function contained
-// within.
-type interceptingTransport struct {
-	// SendFunc is the send callback.
-	SendFunc func(event *sentry.Event)
-}
-
-var _ sentry.Transport = &interceptingTransport{}
-
-// Flush implements the sentry.Transport interface.
-func (it interceptingTransport) Flush(time.Duration) bool {
-	return true
-}
-
-// Configure implements the sentry.Transport interface.
-func (it interceptingTransport) Configure(sentry.ClientOptions) {
-}
-
-// SendEvent implements the sentry.Transport interface.
-func (it interceptingTransport) SendEvent(event *sentry.Event) {
-	it.SendFunc(event)
 }

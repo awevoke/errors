@@ -12,7 +12,7 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-package report_test
+package sentry_test
 
 import (
 	goErr "errors"
@@ -23,44 +23,44 @@ import (
 
 	"github.com/cockroachdb/errors/domains"
 	"github.com/cockroachdb/errors/errbase"
-	"github.com/cockroachdb/errors/report"
 	"github.com/cockroachdb/errors/safedetails"
+	errorssentry "github.com/cockroachdb/errors/sentry"
 	"github.com/cockroachdb/errors/testutils"
 	"github.com/cockroachdb/errors/withstack"
-	sentry "github.com/getsentry/sentry-go"
+	sentrygo "github.com/getsentry/sentry-go"
 	"github.com/kr/pretty"
 )
 
 // func TestReport2(t *testing.T) {
-// 	client, err := sentry.NewClient(
-// 		sentry.ClientOptions{
+// 	client, err := sentrygo.NewClient(
+// 		sentrygo.ClientOptions{
 // 			Debug: true,
 // 			Dsn:   "<URL HERE>",
 // 		})
 // 	if err != nil {
 // 		t.Fatal(err)
 // 	}
-// 	sentry.CurrentHub().BindClient(client)
+// 	sentrygo.CurrentHub().BindClient(client)
 //
 // 	myErr := errutil.Newf("Hello %s %d", "world", redact.Safe(123))
 // 	myErr = errutil.Wrapf(myErr, "some prefix %s", "unseen")
 // 	myErr = errutil.NewAssertionErrorWithWrappedErrf(myErr, "assert %s %s", redact.Safe("safe"), "unsafe")
 //
-// 	if eventID := report.ReportError(myErr); eventID == "" {
+// 	if eventID := errorssentry.ReportError(myErr); eventID == "" {
 // 		t.Fatal("eventID is empty")
 // 	}
-// 	sentry.Flush(2 * time.Second)
+// 	sentrygo.Flush(2 * time.Second)
 // }
 
 func TestReport(t *testing.T) {
-	var events []*sentry.Event
+	var events []*sentrygo.Event
 
-	client, err := sentry.NewClient(
-		sentry.ClientOptions{
+	client, err := sentrygo.NewClient(
+		sentrygo.ClientOptions{
 			// Install a Transport that locally records events rather than
 			// sending them to Sentry over HTTP.
 			Transport: interceptingTransport{
-				SendFunc: func(event *sentry.Event) {
+				SendFunc: func(event *sentrygo.Event) {
 					events = append(events, event)
 				},
 			},
@@ -69,7 +69,7 @@ func TestReport(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	sentry.CurrentHub().BindClient(client)
+	sentrygo.CurrentHub().BindClient(client)
 
 	thisDomain := domains.NamedDomain("thisdomain")
 
@@ -82,7 +82,7 @@ func TestReport(t *testing.T) {
 
 	err = wrapWithMigratedType(err)
 
-	if eventID := report.ReportError(err); eventID == "" {
+	if eventID := errorssentry.ReportError(err); eventID == "" {
 		t.Fatal("eventID is empty")
 	}
 
@@ -100,8 +100,8 @@ report_test.go:\d+: ×
 Wraps: \(2\) error domain: \"thisdomain\"
 Wraps: \(3\) attached stack trace
   -- stack trace:
-  | github.com/cockroachdb/errors/report_test.TestReport
-  | \t[^:]*report/report_test.go:\d+
+  | github.com/cockroachdb/errors/sentry_test.TestReport
+  | \t[^:]*sentry/report_test.go:\d+
   | testing.tRunner
   | \t.*src/testing/testing.go:\d+
   | runtime.goexit
@@ -109,13 +109,13 @@ Wraps: \(3\) attached stack trace
 Wraps: \(4\) universe 123 multi
   | line
 Wraps: \(5\) ×
-Error types: \(1\) *report_test.myWrapper \(2\) *domains.withDomain \(3\) *withstack.withStack \(4\) *safedetails.withSafeDetails \(5\) *errors.errorString
+Error types: \(1\) *sentry_test.myWrapper \(2\) *domains.withDomain \(3\) *withstack.withStack \(4\) *safedetails.withSafeDetails \(5\) *errors.errorString
 -- report composition:
 *errors.errorString
 *safedetails.withSafeDetails: universe 123 multi
-report_test.go:82: *withstack.withStack \(top exception\)
+report_test.go:\d+: *withstack.withStack \(top exception\)
 *domains.withDomain: error domain: \"thisdomain\"
-*report_test.myWrapper$`
+*sentry_test.myWrapper$`
 		tt.CheckRegexpEqual(e.Message, expectedLongMessage)
 	})
 
@@ -124,7 +124,7 @@ report_test.go:82: *withstack.withStack \(top exception\)
 github.com/cockroachdb/errors/safedetails/*safedetails.withSafeDetails (*::)
 github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
 github.com/cockroachdb/errors/domains/*domains.withDomain (*::error domain: "thisdomain")
-github.com/cockroachdb/errors/report_test/*report_test.myWrapper (some/previous/path/prevpkg.prevType::)
+github.com/cockroachdb/errors/sentry_test/*sentry_test.myWrapper (some/previous/path/prevpkg.prevType::)
 `
 		types := fmt.Sprintf("%s", e.Extra["error types"])
 		tt.CheckEqual(types, expectedTypes)
@@ -145,7 +145,7 @@ github.com/cockroachdb/errors/report_test/*report_test.myWrapper (some/previous/
 				f := st.Frames[len(st.Frames)-1]
 				tt.Check(strings.HasSuffix(f.Filename, "report_test.go"))
 				tt.Check(strings.HasSuffix(f.AbsPath, "report_test.go"))
-				tt.Check(strings.HasSuffix(f.Module, "/report_test"))
+				tt.Check(strings.HasSuffix(f.Module, "/sentry_test"))
 				tt.CheckEqual(f.Function, "TestReport")
 				tt.Check(f.Lineno != 0)
 			}
@@ -173,10 +173,10 @@ func (w *myWrapper) Cause() error  { return w.cause }
 // within.
 type interceptingTransport struct {
 	// SendFunc is the send callback.
-	SendFunc func(event *sentry.Event)
+	SendFunc func(event *sentrygo.Event)
 }
 
-var _ sentry.Transport = &interceptingTransport{}
+var _ sentrygo.Transport = &interceptingTransport{}
 
 // Flush implements the sentry.Transport interface.
 func (it interceptingTransport) Flush(time.Duration) bool {
@@ -184,10 +184,10 @@ func (it interceptingTransport) Flush(time.Duration) bool {
 }
 
 // Configure implements the sentry.Transport interface.
-func (it interceptingTransport) Configure(sentry.ClientOptions) {
+func (it interceptingTransport) Configure(sentrygo.ClientOptions) {
 }
 
 // SendEvent implements the sentry.Transport interface.
-func (it interceptingTransport) SendEvent(event *sentry.Event) {
+func (it interceptingTransport) SendEvent(event *sentrygo.Event) {
 	it.SendFunc(event)
 }

@@ -8,7 +8,6 @@ require (
 	github.com/cockroachdb/datadriven v1.0.2
 	github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b
 	github.com/cockroachdb/redact v1.1.5
-	github.com/getsentry/sentry-go v0.27.0
 	github.com/hydrogen18/memlistener v1.0.0
 	github.com/kr/pretty v0.3.1
 	github.com/pkg/errors v0.9.1

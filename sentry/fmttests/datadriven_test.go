@@ -220,6 +220,8 @@ func formatEvent(event *sentrygo.Event) string {
 }
 
 func cleanReport(s string) string {
+	s = filepath.ToSlash(s)
+	s = sentryModuleRef.ReplaceAllString(s, "sentry")
 	s = fileref.ReplaceAllString(s, "<path>:<line>")
 	s = libref.ReplaceAllString(s, "<path>")
 	s = strings.ReplaceAll(s, "\t", "<tab>")
@@ -245,13 +247,17 @@ var funcNN = regexp.MustCompile(`func\d+`)
 
 var asmref = regexp.MustCompile(`runtime/asm_[a-z0-9]+\.s`)
 
-var libroot = func() string {
+var sentryModuleRoot = func() string {
 	wd, err := os.Getwd()
 	if err != nil {
 		panic(err)
 	}
-	return filepath.Clean(filepath.Join(wd, "../.."))
+	return filepath.ToSlash(filepath.Clean(filepath.Join(wd, "..")))
 }()
+
+var sentryModuleRef = regexp.MustCompile(regexp.QuoteMeta(sentryModuleRoot))
+
+var libroot = filepath.ToSlash(filepath.Clean(filepath.Join(sentryModuleRoot, "..")))
 
 var libref = regexp.MustCompile(regexp.QuoteMeta(libroot))
 

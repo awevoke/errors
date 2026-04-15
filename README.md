@@ -5,9 +5,13 @@ This library aims to be used as a drop-in replacement to
 provides *network portability* of error objects, in ways suitable for
 distributed systems with mixed-version software compatibility.
 
-It also provides native and comprehensive support for [PII](https://en.wikipedia.org/wiki/Personal_data)-free details
-and an opt-in [Sentry.io](https://sentry.io/) reporting mechanism that
-automatically formats error details and strips them of PII.
+It also provides native and comprehensive support for [PII](https://en.wikipedia.org/wiki/Personal_data)-free details.
+Optional [Sentry.io](https://sentry.io/) reporting support lives in the
+`github.com/cockroachdb/errors/sentry` module, where it automatically formats
+error details and strips them of PII.
+
+Sentry support lives in the optional module `github.com/cockroachdb/errors/sentry`.
+Importing `github.com/cockroachdb/errors` alone does not require sentry-go.
 
 See also [the design RFC](https://github.com/cockroachdb/cockroach/blob/master/docs/RFCS/20190318_error_handling.md).
 
@@ -40,7 +44,7 @@ Table of contents:
 | **`errors.Is()` recognizes errors across the network**                                                |                     |                         |                            | ✔                    |
 | **comprehensive support for PII-free reportable strings**                                             |                     |                         |                            | ✔                    |
 | support for both `Cause()` and `Unwrap()` [go#31778](https://github.com/golang/go/issues/31778)       |                     |                         |                            | ✔                    |
-| standard error reports to Sentry.io                                                                   |                     |                         |                            | ✔                    |
+| standard error reports to Sentry.io via optional module                                               |                     |                         |                            | ✔                    |
 | wrappers to denote assertion failures                                                                 |                     |                         |                            | ✔                    |
 | wrappers with issue tracker references                                                                |                     |                         |                            | ✔                    |
 | wrappers for user-facing hints and details                                                            |                     |                         |                            | ✔                    |
@@ -69,7 +73,8 @@ older version of the package.
 - encode/decode errors to protobuf with `errors.EncodeError()` / `errors.DecodeError()`.
 - extract **PII-free safe details** with `errors.GetSafeDetails()`.
 - extract human-facing hints and details with `errors.GetAllHints()`/`errors.GetAllDetails()` or `errors.FlattenHints()`/`errors.FlattenDetails()`.
-- produce detailed Sentry.io reports with `errors.BuildSentryReport()` / `errors.ReportError()`.
+- produce detailed Sentry.io reports with the optional module:
+  `errorssentry.BuildReport()` / `errorssentry.ReportError()`.
 - implement your own error leaf types and wrapper types:
   - implement the `error` and `errors.Wrapper` interfaces as usual.
   - register encode/decode functions: call `errors.Register{Leaf,Wrapper}{Encoder,Decoder}()` in a `init()` function in your package.
@@ -78,7 +83,7 @@ older version of the package.
 
 ## What comes out of an error?
 
-| Error detail                                                    | `Error()` and format `%s`/`%q`/`%v` | format `%+v` | `GetSafeDetails()`            | Sentry report via `ReportError()` |
+| Error detail                                                    | `Error()` and format `%s`/`%q`/`%v` | format `%+v` | `GetSafeDetails()`            | Sentry report via `errorssentry.ReportError()` |
 |-----------------------------------------------------------------|-------------------------------------|--------------|-------------------------------|-----------------------------------|
 | main message, eg `New()`                                        | visible                             | visible      | yes (CHANGED IN v1.6)         | full (CHANGED IN v1.6)            |
 | wrap prefix, eg `WithMessage()`                                 | visible (as prefix)                 | visible      | yes (CHANGED IN v1.6)         | full (CHANGED IN v1.6)            |
@@ -285,7 +290,8 @@ It is possible to opt additional in to Sentry reporting, using either of the fol
   - in this example, the string "hello" will be included in Sentry reports.
   - however, it is not part of the main error message returned by `Error()`.
 
-For more details on how Sentry reports are built, see the [`report`](report) sub-package.
+For more details on how Sentry reports are built, see the optional
+[`sentry`](sentry) module.
 
 ## Building your own error types
 
@@ -589,14 +595,14 @@ type MultiCauseDecoder = func(ctx context.Context, causes []error, msgPrefix str
 // Registering package renames for custom error types.
 func RegisterTypeMigration(previousPkgPath, previousTypeName string, newType error)
 
-// Sentry reports.
-func BuildSentryReport(err error) (*sentry.Event, map[string]interface{})
-func ReportError(err error) (string)
+// Optional Sentry reports are available from package
+// github.com/cockroachdb/errors/sentry, commonly imported as errorssentry:
+//   errorssentry.BuildReport(err)
+//   errorssentry.ReportError(err)
+//   errorssentry.GetReportableStackTrace(err)
 
 // Stack trace captures.
 func GetOneLineSource(err error) (file string, line int, fn string, ok bool)
-type ReportableStackTrace = sentry.StackTrace
-func GetReportableStackTrace(err error) *ReportableStackTrace
 
 // Safe (PII-free) details.
 type SafeDetailPayload struct { ... }

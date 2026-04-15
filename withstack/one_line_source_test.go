@@ -73,8 +73,11 @@ func TestOneLineSourceInner(t *testing.T) {
 	for _, err := range testData {
 		file, line, fn, ok := withstack.GetOneLineSource(err)
 		tt.CheckEqual(ok, true)
-		tt.CheckEqual(file, "reportable_test.go")
+		tt.CheckEqual(file, "one_line_source_test.go")
 		tt.Check(strings.HasPrefix(fn, "makeErr"))
 		tt.Check(line > 21)
 	}
 }
+
+func makeErr() error  { return makeErr2() }
+func makeErr2() error { return withstack.WithStack(errors.New("")) }

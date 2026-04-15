@@ -12,7 +12,7 @@
 // implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-package withstack_test
+package sentry_test
 
 import (
 	"context"
@@ -21,9 +21,9 @@ import (
 	"testing"
 
 	"github.com/cockroachdb/errors/errbase"
+	errorssentry "github.com/cockroachdb/errors/sentry"
 	"github.com/cockroachdb/errors/testutils"
 	"github.com/cockroachdb/errors/withstack"
-	"github.com/cockroachdb/errors/withstack/internal"
 	"github.com/kr/pretty"
 	pkgErr "github.com/pkg/errors"
 )
@@ -32,7 +32,7 @@ func TestReportableStackTrace(t *testing.T) {
 	baseErr := errors.New("hello")
 
 	t.Run("pkgErr", func(t *testing.T) {
-		err := internal.Run(func() error { return pkgErr.WithStack(baseErr) })
+		err := Run(func() error { return pkgErr.WithStack(baseErr) })
 		t.Run("local", func(t *testing.T) {
 			checkStackTrace(t, err, 0)
 		})
@@ -44,7 +44,7 @@ func TestReportableStackTrace(t *testing.T) {
 	})
 
 	t.Run("pkgFundamental", func(t *testing.T) {
-		err := internal.Run(func() error { return pkgErr.New("hello") })
+		err := Run(func() error { return pkgErr.New("hello") })
 		t.Run("local", func(t *testing.T) {
 			checkStackTrace(t, err, 0)
 		})
@@ -56,7 +56,7 @@ func TestReportableStackTrace(t *testing.T) {
 	})
 
 	t.Run("withStack", func(t *testing.T) {
-		err := internal.Run(func() error { return withstack.WithStack(baseErr) })
+		err := Run(func() error { return withstack.WithStack(baseErr) })
 		t.Run("local", func(t *testing.T) {
 			checkStackTrace(t, err, 0)
 		})
@@ -68,13 +68,23 @@ func TestReportableStackTrace(t *testing.T) {
 	})
 
 	t.Run("withStack depth", func(t *testing.T) {
-		err := internal.Run(makeErr)
+		err := Run(makeErr)
 		checkStackTrace(t, err, 1)
 	})
 	t.Run("withStack nontrival depth", func(t *testing.T) {
-		err := internal.Run(makeErr3)
+		err := Run(makeErr3)
 		checkStackTrace(t, err, 0)
 	})
+}
+
+// Run is used to verify conversion preserves adjacent caller frames.
+func Run(callback func() error) error {
+	return Run2(callback)
+}
+
+// Run2 is used to verify conversion preserves adjacent caller frames.
+func Run2(callback func() error) error {
+	return callback()
 }
 
 func makeErr() error  { return makeErr2() }
@@ -88,7 +98,7 @@ func checkStackTrace(t *testing.T, err error, expectedDepth int) {
 
 	t.Logf("looking at err %# v", pretty.Formatter(err))
 
-	r := withstack.GetReportableStackTrace(err)
+	r := errorssentry.GetReportableStackTrace(err)
 	tt.Assert(r != nil)
 
 	// We're expecting the Run() functions in second position.
@@ -117,12 +127,12 @@ func checkStackTrace(t *testing.T, err error, expectedDepth int) {
 
 		switch i {
 		case expectedDepth:
-			tt.Check(strings.HasSuffix(f.Filename, "reportable_test.go"))
+			tt.Check(strings.HasSuffix(f.Filename, "stacktrace_test.go"))
 
 		case expectedDepth + 1, expectedDepth + 2:
-			tt.Check(strings.HasSuffix(f.Filename, "internal/run.go"))
+			tt.Check(strings.HasSuffix(f.Filename, "stacktrace_test.go"))
 
-			tt.Check(strings.HasSuffix(f.Module, "withstack/internal"))
+			tt.Check(strings.HasSuffix(f.Module, "sentry_test"))
 
 			tt.Check(strings.HasPrefix(f.Function, "Run"))
 		}

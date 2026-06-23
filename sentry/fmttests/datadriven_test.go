@@ -191,14 +191,15 @@ func formatEvent(event *sentrygo.Event) string {
 		fmt.Fprintf(&buf, "== Tag %q\n%s\n", k, event.Tags[k])
 	}
 
-	extraNames := make([]string, 0, len(event.Extra))
-	for k := range event.Extra {
+	extra := event.Contexts["Additional Data"]
+	extraNames := make([]string, 0, len(extra))
+	for k := range extra {
 		extraNames = append(extraNames, k)
 	}
 	sort.Strings(extraNames)
 	for _, k := range extraNames {
-		extra := strings.TrimSpace(fmt.Sprint(event.Extra[k]))
-		fmt.Fprintf(&buf, "== Extra %q\n%s\n", k, cleanReport(extra))
+		v := strings.TrimSpace(fmt.Sprint(extra[k]))
+		fmt.Fprintf(&buf, "== Extra %q\n%s\n", k, cleanReport(v))
 	}
 
 	for i, exc := range event.Exception {
@@ -300,9 +301,15 @@ func (it interceptingTransport) Flush(time.Duration) bool {
 	return true
 }
 
+func (it interceptingTransport) FlushWithContext(context.Context) bool {
+	return true
+}
+
 func (it interceptingTransport) Configure(sentrygo.ClientOptions) {
 }
 
 func (it interceptingTransport) SendEvent(event *sentrygo.Event) {
 	it.SendFunc(event)
 }
+
+func (it interceptingTransport) Close() {}

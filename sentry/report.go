@@ -70,7 +70,7 @@ import (
 // (8) the Value field (same as (3) for 1st exception)
 // (9) the Stacktrace field (input to (2) on 1st exception)
 // (10) the other fields on the Event object
-// (11) the Extra field
+// (11) the Contexts field (replaces the deprecated Extra field)
 //
 // (Note how the top-level title fields (1) (3) are unrelated to the
 // Message field in the event, which is surprising!)
@@ -372,8 +372,11 @@ var redactedMarker = redact.RedactableString(redact.RedactedMarker()).StripMarke
 func ReportError(err error) (eventID string) {
 	event, extraDetails := BuildReport(err)
 
-	for extraKey, extraValue := range extraDetails {
-		event.Extra[extraKey] = extraValue
+	if len(extraDetails) > 0 {
+		if event.Contexts == nil {
+			event.Contexts = make(map[string]sentrygo.Context)
+		}
+		event.Contexts["Additional Data"] = sentrygo.Context(extraDetails)
 	}
 
 	// Avoid leaking the machine's hostname by injecting the literal "<redacted>".

@@ -127,7 +127,7 @@ github.com/cockroachdb/errors/withstack/*withstack.withStack (*::)
 github.com/cockroachdb/errors/domains/*domains.withDomain (*::error domain: "thisdomain")
 github.com/cockroachdb/errors/sentry_test/*sentry_test.myWrapper (some/previous/path/prevpkg.prevType::)
 `
-		types := fmt.Sprintf("%s", e.Contexts["Additional Data"]["error types"])
+		types := fmt.Sprintf("%s", e.Contexts["error types"]["value"])
 		tt.CheckEqual(types, expectedTypes)
 	})
 

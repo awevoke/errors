@@ -191,14 +191,18 @@ func formatEvent(event *sentrygo.Event) string {
 		fmt.Fprintf(&buf, "== Tag %q\n%s\n", k, event.Tags[k])
 	}
 
-	extra := event.Contexts["Additional Data"]
-	extraNames := make([]string, 0, len(extra))
-	for k := range extra {
-		extraNames = append(extraNames, k)
+	// Only print Contexts entries that carry our merged "value" sub-key so
+	// that Sentry's built-in default contexts (device/os/runtime/trace) do
+	// not leak into fixtures.
+	extraNames := make([]string, 0, len(event.Contexts))
+	for ek, ev := range event.Contexts {
+		if _, ok := ev["value"]; ok {
+			extraNames = append(extraNames, ek)
+		}
 	}
 	sort.Strings(extraNames)
 	for _, k := range extraNames {
-		v := strings.TrimSpace(fmt.Sprint(extra[k]))
+		v := strings.TrimSpace(fmt.Sprint(event.Contexts[k]["value"]))
 		fmt.Fprintf(&buf, "== Extra %q\n%s\n", k, cleanReport(v))
 	}
 

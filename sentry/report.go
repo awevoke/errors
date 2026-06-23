@@ -372,11 +372,11 @@ var redactedMarker = redact.RedactableString(redact.RedactedMarker()).StripMarke
 func ReportError(err error) (eventID string) {
 	event, extraDetails := BuildReport(err)
 
-	if len(extraDetails) > 0 {
-		if event.Contexts == nil {
-			event.Contexts = make(map[string]sentrygo.Context)
-		}
-		event.Contexts["Additional Data"] = sentrygo.Context(extraDetails)
+	if event.Contexts == nil {
+		event.Contexts = make(map[string]sentrygo.Context)
+	}
+	for extraKey, extraValue := range extraDetails {
+		event.Contexts[extraKey] = sentrygo.Context{"value": extraValue}
 	}
 
 	// Avoid leaking the machine's hostname by injecting the literal "<redacted>".
